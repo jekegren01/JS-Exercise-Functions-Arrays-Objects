@@ -149,9 +149,16 @@ getName({ id: 1, name: 'Leia', email: 'leia@leia.com' });
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
-  /* code here */
-}
+ 
+ function appleIndex(arr) {
+   for (let i=0; i < arr.length; i++) {
+     if (arr[i] === 'apple') {
+       return i
+     }
+   }
+ }
+
+appleIndex([ 'orange', 'grape', 'apple', 'banana', 'mango' ]);
 
 /**
  * ### Challenge `isItAnApple`
@@ -168,11 +175,16 @@ function appleIndex(/* code here */) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
-  /* code here */
-}
 
+function isItAnApple(argument) {
+   const ret = [];
+   for (const thing of argument) {
+     ret.push(thing === 'apple' ? true : false);
+   }
+   return ret
+ }
 
+ console.log(isItAnApple([ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ]));
 
 /*
 // ⭐️ Example Test Data ⭐️
