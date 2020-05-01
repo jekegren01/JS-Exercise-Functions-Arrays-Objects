@@ -194,7 +194,7 @@ function isItAnApple(argument) {
 
  console.log(isItAnApple([ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ]));
 
-/*
+
 // ⭐️ Example Test Data ⭐️
 
 var inventory = [
@@ -214,7 +214,7 @@ var inventory = [
   { id: 14, car_make: "Dodge", car_model: "Ram Van 1500", car_year: 1999 }
   /// ... Truncated
 ]
-*/
+
 /**
   * ### Example Array Challenge:
   * 
@@ -291,6 +291,8 @@ function getModelYears(cars) {
 }
 
 console.log(getModelYears(inventory));
+
+
 
 /**
  * ### Challenge `getCarInfoById`
