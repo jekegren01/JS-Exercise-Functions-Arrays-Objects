@@ -85,7 +85,7 @@ function temperatureInF(t, unitCorF) {
   if (unitCorF === 'F') {
     console.log(t + "F");
   } else if (unitCorF === 'C') {
-    console.log(temperatureCtoF(t) + "C");
+    console.log(temperatureCtoF(t) + "F");
   }
 }
 
