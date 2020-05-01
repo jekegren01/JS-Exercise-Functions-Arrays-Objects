@@ -39,7 +39,7 @@ function sayGoodbye(name) {
   return "Goodbye, " + name + ". Have a great day.";
 }
 
-sayGoodbye('Jake');
+console.log(sayGoodbye('Jake'));
 
 /**
  * ### Challenge `temperatureCtoF`
@@ -60,7 +60,8 @@ function temperatureCtoF(celsius) {
   console.log(Math.round(fahrenheit));
 }
 
-temperatureCtoF(0);
+temperatureCtoF(40);
+temperatureCtoF(12);
 
 /**
  * ### Challenge `temperatureInF`
@@ -79,10 +80,17 @@ temperatureCtoF(0);
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
-  /* code here */
+
+function temperatureInF(t, unitCorF) {
+  if (unitCorF === 'F') {
+    console.log(t + "F");
+  } else if (unitCorF === 'C') {
+    console.log(temperatureCtoF(t) + "C");
+  }
 }
 
+temperatureInF(100, 'F');
+temperatureInF(100, 'C');
 
 /**
  * ### Challenge `makePersonObject`
@@ -273,9 +281,16 @@ console.log(getCarInfoByIndex(inventory, 10));
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(/* code here */) {
-  /* code here */
+
+function getModelYears(cars) {
+  const years = [];
+  for (const car of cars) {
+    years.push(car.car_year);
+  }
+  return years;
 }
+
+console.log(getModelYears(inventory));
 
 /**
  * ### Challenge `getCarInfoById`
